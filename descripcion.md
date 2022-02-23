@@ -6,4 +6,4 @@ Este script abrirá un menú con diversas opciones, nos guiará para poder crear
 
 Este script solo se podrá ser ejecutado por el root.
 
-Pinche [aquí](https://github.com/rubenamadoc/Proyectoscript/blob/b7e922e386da74a2f6ad0b55289bbee9f9ba8106/explicacion.md) para ir a la explicación.
+Pinche [aquí](https://github.com/rubenamadoc/Proyectoscript/blob/8884504a18c68c584fcbb4dbcc2ab4124bd5d415/explicacion.md) para ir a la explicación.
