@@ -13,4 +13,4 @@ Para ello nos proporciona cinco opciones (seis si contamos con la de salida):
 6. Sale del script.
 
 
-Os proporciono el código completo [aquí](https://github.com/rubenamadoc/Proyectoscript/blob/bbc43615fa44750108bb509667e5a4f8c637fdc2/codigo.sh).
+Os proporciono el código completo [aquí](https://github.com/rubenamadoc/Proyectoscript/blob/b7e922e386da74a2f6ad0b55289bbee9f9ba8106/codigo.sh).
