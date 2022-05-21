@@ -4,6 +4,8 @@
 
 control=0
 lorca=1
+velazquez=1
+picasso=1
 
 #Funciones:
 
@@ -13,7 +15,7 @@ menu (){
     echo " 	    Menu           "
     echo "*************************"
     echo "1.-Comprobar la existencia de un usuario"
-    echo "2.-Comprobar la existencia del usuario"
+    echo "2.-Comprobar la conexión del usuario"
     echo "3.-Realizar una copia de seguridad"
     echo "4.-Recuperar una copia de seguridad"
     echo "5.-Comprobar copias existentes"
@@ -54,6 +56,8 @@ comprobar_usuario=$(who|grep -wi "$usuario")
 		else
 			echo "El usuario está desconectado. Puede elegir otra opción"
     	fi
+velazquez=0
+picasso=0
 }
 
 opcion3 (){
@@ -61,12 +65,16 @@ opcion3 (){
     then
     opcion1
     fi
+    if [ $velazquez -eq 1 ]
+    then
+    opcion2
+    fi
 	read -p "Introduce la ruta de destino " destino
 	ruta_copia=$(ls $destino)
 	if [ -n "$ruta_copia" ]
 	then
     		tar -zcvf $destino/$usuario.tar.gz /home/$usuario
-   		 cat $destino
+   		 ls $destino
 	else
 		read -p "La ruta introducida no existe. ¿Desea crearla? s/n " answer
 		if [ $answer = "s" ]
@@ -83,17 +91,20 @@ opcion4 (){
     then
     opcion1
     fi
-    read -p "Introduce la ruta abosulta del archivo a resaurar" archivo
+    if [ $picasso -eq 1 ]
+    then
+    opcion2
+    fi
+    read -p "Introduce la ruta abosulta del archivo a resaurar:" archivo
     tar -zxvf $archivo -C /
 	ls /home/$usuario
 }
 
 opcion5 (){
-    if [ $lorca -eq 1 ]
-    then
-    opcion1
-    fi
-    cat $destino
+
+    read -p "Dime la ruta absoluta de la carpeta:" carpeta
+    ls $carpeta
+    
 }
 
 #Bloque principal
